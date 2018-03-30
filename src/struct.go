@@ -40,6 +40,9 @@ func main() {
 	f.Println("name is", mark.name)
 	f.Println("age is", mark.age)
 	f.Println("weight is", peter.weight)//为0,因为没有初始化
-	
+
+	zgc := new(Student)
+
+
 }
 

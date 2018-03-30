@@ -1,6 +1,9 @@
-package main 
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 //import (
 //	"fmt"
 //)
@@ -20,6 +23,7 @@ func main() {
  	aslice := array[:4]//包含'a','b','c',aslice[1] is 'a'
  	
  	aslice = append(aslice,'s')//添加一个元素到slice
+ 	strconv.Atoi()
 	
 //	rating := map[string]int32 {"a":5,"b":4,"c":3}
 //	c ,ok := rating["d"]//有2个返回值,key "d" 不存在
