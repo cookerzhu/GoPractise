@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"sync"
 )
 
 type People struct {
@@ -32,6 +33,7 @@ func main(){
 	}
 	fmt.Println("people:",p)//{}
 	fmt.Println([]byte(js))
+
 
 }
 
