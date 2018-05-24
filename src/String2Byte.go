@@ -2,7 +2,11 @@
 @See http://www.cnblogs.com/mushroom/p/8998538.html
  */
 package main
-import "fmt"
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
 func main() {
 	s := []byte("")//cap is 32 ,len is 0 没有下面的注释，slice分配在栈上面，初始化大小是32的数组
 	s1 := append(s, 'a')
@@ -13,4 +17,8 @@ func main() {
 
 	news := []byte{} // cap and len is 0
 	fmt.Println(cap(news), len(news))
+
+
+	fmt.Println(utf8.RuneCountInString("你好"))//2
+	fmt.Println(len("你好"))//6
 }
