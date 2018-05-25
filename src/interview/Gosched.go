@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-	"sort"
 )
 
 const M = 26
@@ -33,12 +32,12 @@ func main() {
 	}
 	wg.Wait()
 
-	fmt.Println()
+	fmt.Println("\n main proc finished")
 
 
 
-	s := []Ss{{1}, {3}, {5}, {2}}
-	sort.Slice(s, func(i, j int) bool { return s[i].v < s[j].v })
-	fmt.Printf("%#v", s)
+	//s := []Ss{{1}, {3}, {5}, {2}}
+	//sort.Slice(s, func(i, j int) bool { return s[i].v < s[j].v })
+	//fmt.Printf("%#v", s)
 }
 
