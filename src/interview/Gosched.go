@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
+	"time"
 )
 
 const M = 26
@@ -21,6 +22,7 @@ func main() {
 	wg.Add(2 * M)
 	for i := 0; i < M; i++ {
 		go func(i int) {
+			time.Sleep(time.Second * 5 )
 			defer wg.Done()
 			runtime.Gosched()// A
 			fmt.Printf("%c", 'a'+i)
@@ -30,9 +32,10 @@ func main() {
 			fmt.Printf("%c", 'A'+i)
 		}(i)
 	}
+	fmt.Println("main proc begin")
 	wg.Wait()
 
-	fmt.Println("\n main proc finished")
+	fmt.Println("\nmain proc finished")
 
 
 
